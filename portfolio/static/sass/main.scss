@@ -1,0 +1,29 @@
+// Define your variables
+$spacer: 20px;
+$primary-color: #007bff;
+
+// Use variables in your styles
+.mt-0 {
+    margin-top: 0;
+}
+
+.ms-1 {
+    margin-left: $spacer * 0.25;
+}
+
+.px-2 {
+    padding-left: $spacer * 0.5;
+    padding-right: $spacer * 0.5;
+}
+
+.p-3 {
+    padding: $spacer;
+}
+
+.btn {
+    background-color: $primary-color;
+    color: white;
+    padding: $spacer * 0.75 $spacer;
+    border: none;
+    cursor: pointer;
+}

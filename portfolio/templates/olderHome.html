@@ -1,0 +1,143 @@
+<!--  Image a the center  -->
+{% block profile %}
+<!--  End navbar -->
+<div class="site-header border-bottom-0">
+</div>
+
+</div>
+<div   class="img-profile d-flex mx-auto">
+  <img src="{{ url_for('static', filename='profile.jpeg') }}" class="card-img-top rounded-circle mw-25 w-25 h-25" alt="...">
+</div>
+<div class="d-flex justify-content-center mt-2">
+  <p class=" text-center border-bottom w-50"> AI engineer. Software Devolopper. Math-passionate
+  </p>
+</div>
+{% endblock %}
+
+{% block contentHome %}
+<div class="container mt-3 mx-auto">
+  <div class="h2 mb-2 text-center "> Short Bio </div>
+<div class="text-center">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  In hac habitasse platea dictumst quisque sagittis purus. Morbi tempus iaculis urna id volutpat. Aliquam sem fringilla ut morbi tincidunt augue interdum.
+    Ac odio tempor orci dapibus ultrices in iaculis nunc. Nunc vel risus commodo viverra. Scelerisque viverra mauris in aliquam sem. Arcu bibendum at varius vel pharetra vel turpis.
+    Ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim. Eget mauris pharetra et ultrices. Sollicitudin aliquam ultrices 
+  sagittis orci a scelerisque purus semper. Non consectetur a erat nam at lectus urna duis convallis. Interdum consectetur libero id faucibus nisl tincidunt eget nullam non.
+</div>
+  
+</div>
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+<div class="mb-2" >
+    <h3> A short words about me </h3>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        In hac habitasse platea dictumst quisque sagittis purus. Morbi tempus iaculis urna id volutpat. Aliquam sem fringilla ut morbi tincidunt augue interdum.
+          Ac odio tempor orci dapibus ultrices in iaculis nunc. Nunc vel risus commodo viverra. Scelerisque viverra mauris in aliquam sem. Arcu bibendum at varius vel pharetra vel turpis.
+          Ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim. Eget mauris pharetra et ultrices. Sollicitudin aliquam ultrices 
+        sagittis orci a scelerisque purus semper. Non consectetur a erat nam at lectus urna duis convallis. Interdum consectetur libero id faucibus nisl tincidunt eget nullam non.
+    </p>
+</div>
+<!--  Interests and  -->
+<div class="container mb-2">
+  <div class="row">
+      <div class="col-5">
+          <h2> Interests</h2>
+          <ul>
+              <li> Ma liste</li>
+              <li> Ma liste 2</li>
+              <li> List three</li>
+            </ul>
+        </div>
+        <div class="col-5">
+            <h2> Education</h2>
+            <ul>
+                <li> xMSc in ML</li>
+                <li> xMSc in ML</li>
+                <li> xMSc in ML</li>
+            </ul>
+          </div>
+    </div>
+
+</div>
+<div class="container mt-2">
+<div class="row">
+    <div class="col-lg-5" >
+        <h2> Latests Posts</h2>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div  style="border: 1px solid;" class="col-md-4">
+                <img  style="border: 1px solid; height: 100%;" src="{{ url_for('static', filename='post1.jpeg')}}"  class="img-fluid rounded float-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="{{ url_for('static', filename='post2.png')}}"  class="img-fluid rounded float-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+    </div>
+    <div class="col-lg-5 mx-2">
+        <h2> Events</h2>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img ssrc="{{ url_for('static', filename='event1.jpeg')}}"   class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img ssrc="{{ url_for('static', filename='event2.jpeg')}}"   class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+       
+    </div>
+
+</div>
+</div>
+{% endblock %}

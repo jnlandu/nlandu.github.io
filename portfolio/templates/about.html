@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block customStyle %}
+<link rel="stylesheet" type="text/css" href="
+{{ url_for('static', filename = 'main.css')  }}">
+{% endblock %}
+
+{% block contentHome %}
+
+<!-- <div class="container mx-auto my-5 w-75 h-75 "> -->
+<div class="container d-flex justify-content-center align-items-center my-5 h-100">
+  <div class="row w-75 h-75">
+      <div class="col-5">
+        <img src="{{url_for('static', filename='drj.jpeg')}}" class="img-thumbnail mw-2 mh-2">
+        </div>
+        <div class="col-5">
+            <h2 class="h3"> About Me</h2>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+            officia deserunt mollit anim id est laborum.            
+          </div>
+    </div>
+
+</div>
+
+{% endblock %}
