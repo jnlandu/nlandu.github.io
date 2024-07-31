@@ -1,12 +1,13 @@
 {% extends 'layout.html' %}
-
+<!--  Header  -->
+{% include 'homeHeader.html' %}
 
 <!--  Main content of Home  -->
 {% block mainContent %}
   <div class="row mx-auto">
     <!--  Main side for Latests posts. Left side   -->
         <div class="left-side-all-device container col-md-8 mb-1 ">
-              <h1 class="h2 latest-posts mb-4">Latests posts </h1>
+             <h1 class="h2 latest-posts mb-4">Latests posts </h1>
           <div class=" row  d-flex justify-content-center ">
             <div class="post-img-div-other-device col-md-4 ">
               <img class="img-fluid img-content " src="{{ url_for('static', filename='flask-1.png')}}">

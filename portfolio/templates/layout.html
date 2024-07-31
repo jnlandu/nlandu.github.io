@@ -30,52 +30,8 @@
         <svg width="24" height="24" fill="#FFF"><use use xlink:href="#back-to-top-btn"></use></svg>
 </a>
 
-    <header>
-        <div class="row d-flex justify-content-start  ">
-            <div class="profile-div col-md-4">
-              <!--  Logo image  and profile  -->
-                <div   class="img-profile  mx-auto my-auto logo  border-dark ">
-                  <img src="{{ url_for('static', filename='profile.jpeg') }} " class="card-img-top  rounded-circle" alt="...">
-                </div>
-            </div>
-            
-            <div class="bio-div bio-container col-md-8  ">
-                <h1 class="h1 me text-white"> Jérémie <span class="yellow"> N. Mabiala </span></h1>
-                <p class="bio">
-                  <span class="yellow"> Welcome!</span> I am Jérémie N. Mabiala. I am currently a masters student in 
-                  Machine Intelligence and Artificial Intelligence at the African Masters in Machine Intelligence affiliated <tbody>
-                    the African Institute for Mathematical Sciences (AMMI-AIMS). I am an aspiring AI engineer and researcher.
-                  I  am software developer and apprentice writer and poet  in my hobbies.
-                  </p>
-                <!--  Nav bar  -->
-                <div class="nav-rs-container">
-                <div class=" mt-0 navbar  navbar-expand-md">
-                    <button class="navbar-toggler btn-toggler  mr-auto mb-0 bg-yellow " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="nav-menu collapse navbar-collapse " id="navbarSupportedContent">
-                      <div class="menu-body  navbar-nav">
-                      <a class="nav-link {% if title== 'home' %}  nav-item-active-color    {% else %} nav-item-inactive-color {% endif %}  " href="{{ url_for('home')}}">Home</a>
-                      <a class="nav-link {% if title== 'consulting' %}  nav-item-active-color   {% else %} nav-item-inactive-color {% endif %}  " href="{{ url_for('consulting')}}">Consulting</a> 
-                      <a class="nav-link {% if title== 'posts' %}  nav-item-active-color   {% else %} nav-item-inactive-color {% endif %} " href="{{ url_for('posts') }}">Posts</a> 
-                      <a class="nav-link {% if title== 'resume' %}  nav-item-active-color   {% else %} nav-item-inactive-color {% endif %}  " href="{{ url_for('resume')}}">Resume/Cv</a> 
-                      <a class="nav-link {% if title== 'contact' %}  nav-item-active-color   {% else %} nav-item-inactive-color {% endif %} " href="{{ url_for('contact')}}"> Contact</a> 
-                    </div>
-                </div>
-                </div>
-                <div class="rs-mobile">
-                  <a class="mx-2 rs-click" href="https://x.com/ValentinMabiala"><svg  width="24" height="24" fill="#D9D9D9"><use xlink:href="#twitter"></use></svg></a>
-                  <a class="mx-2 rs-click" href="https://www.linkedin.com/in/jnlandu00a/"><svg  width="24" height="24" fill="#D9D9D9"><use xlink:href="#linkedin"></use></svg></a>
-                  <a class="mx-2 rs-click" href="https://x.com/ValentinMabiala"><svg  width="24" height="24" fill="#D9D9D9"><use xlink:href="#facebook"></use></svg></a>
-                  <a class="mx-2 rs-click" href="https://www.github.com/jnlandu"><svg  width="24" height="24" fill="#D9D9D9"><use xlink:href="#github"></use></svg> </a>      
-                 </div>
-                </div>
-            </div>
-
-        <!-- </div> -->
-      </div>
-      </header>
-    <!--  Main content  -->
+    
+<!--  Main content  -->
 <!--  Main content for the Home page  -->
 {% block  mainContent %}
 
