@@ -1,0 +1,54 @@
+<header class="d-flex flex-column">
+
+    <div class="">
+        <p class="h2 text-center text-white"> AI, Machine Learning and Programming Blog </p>
+        <p class="text-center text-white"> Jeremie Nlandu-Mabiala</p>
+    </div>
+
+
+
+<!--  Menu  -->
+<div class="d-flex flex-row justify-content-between">
+    <a class="navbar-toggler btn-toggler mr-auto mb-0  "
+    data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" 
+    aria-controls="offcanvasExampleLabel" aria-expanded="false" aria-label="Toggle navigation"
+    >
+        
+        <svg  width="24" height="24" fill="#F90"><use xlink:href="#menu"></use></svg>
+    </a>
+
+<div class="post-rs-mobile">
+    <a class="mx-2 rs-click" href="https://x.com/ValentinMabiala"><svg  width="24" height="24" fill="#D9D9D9"><use xlink:href="#twitter"></use></svg></a>
+    <a class="mx-2 rs-click" href="https://www.linkedin.com/in/jnlandu00a/"><svg  width="24" height="24" fill="#D9D9D9"><use xlink:href="#linkedin"></use></svg></a>
+    <a class="mx-2 rs-click" href="https://x.com/ValentinMabiala"><svg  width="24" height="24" fill="#D9D9D9"><use xlink:href="#facebook"></use></svg></a>
+    <a class="mx-2 rs-click" href="https://www.github.com/jnlandu"><svg  width="24" height="24" fill="#D9D9D9"><use xlink:href="#github"></use></svg> </a>      
+   </div>
+
+</div>
+<!--  Offcanvas left -->
+  
+<div class="offcanvas offcanvas-start bg-prim" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+
+    <div class="offcanvas-header d-flex justify-content-between  ">
+      <a  type="button" class="text-reset" aria-label="Close" data-bs-dismiss="offcanvas" ><svg  width="24" height="24" fill="#F90"><use xlink:href="#menu"></use></svg></a>
+      <a  type="button" class=" text-reset" data-bs-dismiss="offcanvas" aria-label="Close" >Menu</a>
+    </div>
+
+    <div class="offcanvas-body">
+        <div class=" mt-0 navbar  navbar-expand-md">
+
+            <div class="nav-menu " id="navbarSupportedContent">
+              <div class="menu-body  navbar-nav">
+              <a class="nav-link border-bottom {% if title== 'home' %}  nav-item-active-color    {% else %} nav-item-inactive-color {% endif %}  " href="{{ url_for('home')}}">Home</a>
+              <a class="nav-link {% if title== 'consulting' %}  nav-item-active-color   {% else %} nav-item-inactive-color {% endif %}  " href="{{ url_for('consulting')}}">Category</a> 
+              <a class="nav-link {% if title== 'posts' %}  nav-item-active-color   {% else %} nav-item-inactive-color {% endif %} " href="{{ url_for('posts') }}">Opinions</a> 
+             <a class="nav-link {% if title== 'resume' %}  nav-item-active-color   {% else %} nav-item-inactive-color {% endif %}  " href="{{ url_for('resume')}}">Archives</a> 
+             <a class="nav-link {% if title== 'resume' %}  nav-item-active-color   {% else %} nav-item-inactive-color {% endif %}  " href="{{ url_for('resume')}}">News</a> 
+              <a class="nav-link {% if title== 'contact' %}  nav-item-active-color   {% else %} nav-item-inactive-color {% endif %} " href="{{ url_for('contact')}}">Login</a> 
+            </div>
+        </div>
+        </div>
+        
+    </div>
+</div>
+</header>

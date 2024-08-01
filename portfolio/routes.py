@@ -35,6 +35,9 @@ def resume():
 def consulting():
     return render_template('consulting.html', title ="consulting")
 
+@app.route('/postsContent')
+def postsContent():
+    return render_template('postsContent.html', title ="posts")
 
 # For emails 
 @app.route('/sent', methods=['POST', 'GET'])

@@ -2,62 +2,9 @@
 
 
 {% block mainContent %}
-<header class="d-flex flex-column">
-
-    <div class="">
-        <p class="h2 text-center text-white"> AI, Machine Learning and Programming Blog </p>
-        <p class="text-center text-white"> Jeremie Nlandu-Mabiala</p>
-    </div>
 
 
-
-<!--  Menu  -->
-<div class="d-flex flex-row justify-content-between">
-    <a class="navbar-toggler btn-toggler mr-auto mb-0  "
-    data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" 
-    aria-controls="offcanvasExampleLabel" aria-expanded="false" aria-label="Toggle navigation"
-    >
-        
-        <svg  width="24" height="24" fill="#F90"><use xlink:href="#menu"></use></svg>
-    </a>
-
-<div class="post-rs-mobile">
-    <a class="mx-2 rs-click" href="https://x.com/ValentinMabiala"><svg  width="24" height="24" fill="#D9D9D9"><use xlink:href="#twitter"></use></svg></a>
-    <a class="mx-2 rs-click" href="https://www.linkedin.com/in/jnlandu00a/"><svg  width="24" height="24" fill="#D9D9D9"><use xlink:href="#linkedin"></use></svg></a>
-    <a class="mx-2 rs-click" href="https://x.com/ValentinMabiala"><svg  width="24" height="24" fill="#D9D9D9"><use xlink:href="#facebook"></use></svg></a>
-    <a class="mx-2 rs-click" href="https://www.github.com/jnlandu"><svg  width="24" height="24" fill="#D9D9D9"><use xlink:href="#github"></use></svg> </a>      
-   </div>
-
-</div>
-<!--  Offcanvas left -->
-  
-<div class="offcanvas offcanvas-start bg-prim" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-
-    <div class="offcanvas-header d-flex justify-content-between  ">
-      <a  type="button" class="text-reset" aria-label="Close" data-bs-dismiss="offcanvas" ><svg  width="24" height="24" fill="#F90"><use xlink:href="#menu"></use></svg></a>
-      <a  type="button" class=" text-reset" data-bs-dismiss="offcanvas" aria-label="Close" >Menu</a>
-    </div>
-
-    <div class="offcanvas-body">
-        <div class=" mt-0 navbar  navbar-expand-md">
-
-            <div class="nav-menu " id="navbarSupportedContent">
-              <div class="menu-body  navbar-nav">
-              <a class="nav-link border-bottom {% if title== 'home' %}  nav-item-active-color    {% else %} nav-item-inactive-color {% endif %}  " href="{{ url_for('home')}}">Home</a>
-              <a class="nav-link {% if title== 'consulting' %}  nav-item-active-color   {% else %} nav-item-inactive-color {% endif %}  " href="{{ url_for('consulting')}}">Category</a> 
-              <a class="nav-link {% if title== 'posts' %}  nav-item-active-color   {% else %} nav-item-inactive-color {% endif %} " href="{{ url_for('posts') }}">Opinions</a> 
-             <a class="nav-link {% if title== 'resume' %}  nav-item-active-color   {% else %} nav-item-inactive-color {% endif %}  " href="{{ url_for('resume')}}">Archives</a> 
-             <a class="nav-link {% if title== 'resume' %}  nav-item-active-color   {% else %} nav-item-inactive-color {% endif %}  " href="{{ url_for('resume')}}">News</a> 
-              <a class="nav-link {% if title== 'contact' %}  nav-item-active-color   {% else %} nav-item-inactive-color {% endif %} " href="{{ url_for('contact')}}">Login</a> 
-            </div>
-        </div>
-        </div>
-        
-    </div>
-</div>
-</header>
-
-
+{% include 'postHeader.html' %}
 
 
   <div class="post-item left-side-all-device container mt-5 mb-1 shadow-lg ">
@@ -68,7 +15,7 @@
                 </div>
 
                 <div class="mx-2 post-content-div">
-                <h1 class=" h4 mb-0 mt-2"> <a class=" text-white post-link" href="#">Unraveling spectral properties of kernel matrices – I</a></h1>
+                <h1 class=" h4 mb-0 mt-2"> <a class=" text-white post-link" href="{{ url_for('postsContent')}}">Unraveling spectral properties of kernel matrices – I</a></h1>
                 <small class=" text-white mt-0 post-content"> Posted on July 24, 2024 | By  <a class="link" href="/home" >Jeremie Mabiala. </a></small>
                     <!-- <svg  width="17" height="17" fill="#F90"><use xlink:href="#time"></use></svg>   -->
                     
@@ -85,7 +32,7 @@
                   dolorem? Earum error adipisci nobis, dignissimos culpa quidem?<br>
               </p>
             </div>
-            <a class="bg-yellow text-center w-50 rounded-top rounded-bottom nav-link text-black mb-3" href="#">Read more<svg width="24" height="24" fill="#black"><use xlink:href="#read"></use></svg></a>
+            <a class="bg-yellow text-center w-50 rounded-top rounded-bottom nav-link text-black mb-3" href="{{ url_for('postsContent')}}">Read more<svg width="24" height="24" fill="#black"><use xlink:href="#read"></use></svg></a>
           </div>
 
 
@@ -102,7 +49,7 @@
                 </div>
 
                 <div class="mx-2 post-content-div">
-                <h1 class=" h4 mb-0 mt-2"> <a class=" text-white post-link" href="#">Unraveling spectral properties of kernel matrices – I</a></h1>
+                <h1 class=" h4 mb-0 mt-2"> <a class=" text-white post-link" href="{{ url_for('postsContent')}}">Unraveling spectral properties of kernel matrices – I</a></h1>
                 <small class=" text-white mt-0 post-content"> Posted on July 24, 2024 | By  <a class="link" href="/home" >Jeremie Mabiala. </a></small>
                     <!-- <svg  width="17" height="17" fill="#F90"><use xlink:href="#time"></use></svg>   -->
                     
@@ -119,7 +66,7 @@
                   dolorem? Earum error adipisci nobis, dignissimos culpa quidem?<br>
               </p>
             </div>
-            <a class="bg-yellow text-center w-50 rounded-top rounded-bottom nav-link text-black mb-3" href="#">Read more<svg width="24" height="24" fill="#black"><use xlink:href="#read"></use></svg></a>
+            <a class="bg-yellow text-center w-50 rounded-top rounded-bottom nav-link text-black mb-3" href="{{ url_for('postsContent')}}">Read more<svg width="24" height="24" fill="#black"><use xlink:href="#read"></use></svg></a>
           </div>        
   </div>
 
@@ -132,7 +79,7 @@
                 </div>
 
                 <div class="mx-2 post-content-div">
-                <h1 class=" h4 mb-0 mt-2"> <a class=" text-white post-link" href="#">Unraveling spectral properties of kernel matrices – I</a></h1>
+                <h1 class=" h4 mb-0 mt-2"> <a class=" text-white post-link" href="{{ url_for('postsContent')}}">Unraveling spectral properties of kernel matrices – I</a></h1>
                 <small class=" text-white mt-0 post-content"> Posted on July 24, 2024 | By  <a class="link" href="/home" >Jeremie Mabiala. </a></small>
                     <!-- <svg  width="17" height="17" fill="#F90"><use xlink:href="#time"></use></svg>   -->
                     
@@ -149,7 +96,7 @@
                   dolorem? Earum error adipisci nobis, dignissimos culpa quidem?<br>
               </p>
             </div>
-            <a class="bg-yellow text-center w-50 rounded-top rounded-bottom nav-link text-black mb-3" href="#">Read more<svg width="24" height="24" fill="#black"><use xlink:href="#read"></use></svg></a>
+            <a class="bg-yellow text-center w-50 rounded-top rounded-bottom nav-link text-black mb-3" href="{{ url_for('postsContent')}}">Read more<svg width="24" height="24" fill="#black"><use xlink:href="#read"></use></svg></a>
           </div>        
   </div>
 
@@ -162,7 +109,7 @@
                 </div>
 
                 <div class="mx-2 post-content-div">
-                <h1 class=" h4 mb-0 mt-2"> <a class=" text-white post-link" href="#">Unraveling spectral properties of kernel matrices – I</a></h1>
+                <h1 class=" h4 mb-0 mt-2"> <a class=" text-white post-link" href="{{ url_for('postsContent')}}">Unraveling spectral properties of kernel matrices – I</a></h1>
                 <small class=" text-white mt-0 post-content"> Posted on July 24, 2024 | By  <a class="link" href="/home" >Jeremie Mabiala. </a></small>
                     <!-- <svg  width="17" height="17" fill="#F90"><use xlink:href="#time"></use></svg>   -->
                     
@@ -179,7 +126,7 @@
                   dolorem? Earum error adipisci nobis, dignissimos culpa quidem?<br>
               </p>
             </div>
-            <a class="bg-yellow text-center w-50 rounded-top rounded-bottom nav-link text-black mb-3" href="#">Read more<svg width="24" height="24" fill="#black"><use xlink:href="#read"></use></svg></a>
+            <a class="bg-yellow text-center w-50 rounded-top rounded-bottom nav-link text-black mb-3" href="{{ url_for('postsContent')}}">Read more<svg width="24" height="24" fill="#black"><use xlink:href="#read"></use></svg></a>
           </div>        
   </div>
 
@@ -192,7 +139,7 @@
                 </div>
 
                 <div class="mx-2 post-content-div">
-                <h1 class=" h4 mb-0 mt-2"> <a class=" text-white post-link" href="#">Unraveling spectral properties of kernel matrices – I</a></h1>
+                <h1 class=" h4 mb-0 mt-2"> <a class=" text-white post-link" href="{{ url_for('postsContent')}}">Unraveling spectral properties of kernel matrices – I</a></h1>
                 <small class=" text-white mt-0 post-content"> Posted on July 24, 2024 | By  <a class="link" href="/home" >Jeremie Mabiala. </a></small>
                     <!-- <svg  width="17" height="17" fill="#F90"><use xlink:href="#time"></use></svg>   -->
                     
@@ -209,35 +156,35 @@
                   dolorem? Earum error adipisci nobis, dignissimos culpa quidem?<br>
               </p>
             </div>
-            <a class="bg-yellow text-center w-50 rounded-top rounded-bottom nav-link text-black mb-3" href="#">Read more<svg width="24" height="24" fill="#black"><use xlink:href="#read"></use></svg></a>
+            <a class="bg-yellow text-center w-50 rounded-top rounded-bottom nav-link text-black mb-3" href="{{ url_for('postsContent')}}">Read more<svg width="24" height="24" fill="#black"><use xlink:href="#read"></use></svg></a>
           </div>        
   </div>
 
   <!--  Pagination -->
 
-  <div class=" left-side-all-device container">
-    <!-- <nav aria-label="Page navigation example"> -->
-        <ul class="pagination">
+  <div class="container w-50 ">
+    <ul class="pagination ">
         <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous">
+            <a class="page-link bg-yellow text-dark" href="#" aria-label="Previous">
             <span aria-hidden="true">&laquo;</span>
             <!-- <span class="sr-only"></span> -->
             </a>
         </li>
-        <li class="page-item bg-yellow"><a class="page-link active " href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item bg-yellow"><a class="page-link bg-yellow text-dark  " href="#">1</a></li>
+        <li class="page-item"><a class="page-link bg-yellow text-dark" href="#">2</a></li>
+        <li class="page-item"><a class="page-link bg-yellow text-dark" href="#">3</a></li>
        
         <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
+            <a class="page-link bg-yellow text-dark" href="#" aria-label="Next">
             <span aria-hidden="true">&raquo;</span>
             <!-- <span class="sr-only">Next</span> -->
             </a>
         </li>
         </ul>
-    <!-- </nav> -->
 
-  </div>
+
+ </div>
+
 
 
 
@@ -246,26 +193,3 @@
 
  
 {% endblock %}
-
-
-
-<div class="post-item left-side-all-device container mt-5 mb-3">
-    <div class="row  d-flex justify-content-center ">
-            <!-- <div class="post-img-div-other-device col-md-4 ">
-              <img class="img-fluid img-content " src="{{ url_for('static', filename='flask-1.png')}}">
-            </div> -->
-            <div class="  post-content-div col-md-8">
-            <h1 class="text-center h1 mb-0"> <a class=" text-white post-link" href="#">Unraveling spectral properties of kernel matrices – I</a></h1>
-              <span class="yellow mt-0 post-content"> <svg  width="17" height="17" fill="#F90"><use xlink:href="#time"></use></svg>  7 min read | 
-                <svg  width="17" height="17" fill="#F90"><use xlink:href="#calendar"></use></svg> July 14, 2024 | by Jeremie Mabiala</span>
-                <p class="post-context-text mt-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus 
-                  sint impedit doloremque reprehenderit, facilis quo optio veritatis molestias 
-                  autem sit amet magni laborum veniam corporis quam nostrum nam iure incidunt.
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed autem atque fuga quam 
-                  ab architecto repudiandae amet perferendis, ea excepturi cupiditate nisi
-                  dolorem? Earum error adipisci nobis, dignissimos culpa quidem?<br>
-              </p>
-            </div>
-            <a class="bg-yellow text-center w-50 rounded-top rounded-bottom nav-link text-black mb-3" href="#">Read more<svg width="24" height="24" fill="#black"><use xlink:href="#read"></use></svg></a>
-          </div>
-  </div>

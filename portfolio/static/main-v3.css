@@ -165,7 +165,9 @@ div.logo {
     /* background-color: ; */
 }
 
-
+.page-item{
+    background-color: #F90 !important;
+}
 
 
   /*  media queries for mobiles */
