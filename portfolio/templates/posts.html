@@ -1,16 +1,195 @@
 {% extends 'layout.html' %}
 
+
 {% block mainContent %}
 
-<article class="container d-flex justify-content-center align-items-center my-5">
-    <!-- <img class="rounded-circle article-img" src="#" -->
-    <div class="media-body">
-    <div class="article-metadata">
-        <a class="mr-2" href="#">post author</a>
-        <small class="text-muted">text</small>
-    </div>
-    <h2><a class="article-title" href="#"> post title </a></h2>
-    <p class="article-content"> Content </p>
-    </div>
-</article>
+
+{% include 'postHeader.html' %}
+
+
+  <div class="post-item left-side-all-device container mt-5 mb-1 shadow-lg ">
+    <div class="row  d-flex justify-content-center ">
+            <div class="d-flex">
+                <div class="w-25 h-2 mt-2 float-right">
+                <img class="img-fluid rounded-circle" src="{{ url_for('static', filename='profile.jpeg')}}">
+                </div>
+
+                <div class="mx-2 post-content-div">
+                <h1 class=" h4 mb-0 mt-2"> <a class=" text-white post-link" href="{{ url_for('postsContent', blog_name='python')}}">Unraveling spectral properties of kernel matrices – I</a></h1>
+                <small class=" text-white mt-0 post-content"> Posted on July 24, 2024 | By  <a class="link" href="/home" >Jeremie Mabiala. </a></small>
+                    <!-- <svg  width="17" height="17" fill="#F90"><use xlink:href="#time"></use></svg>   -->
+                    
+                    <!-- 7 min read |  -->
+                    <!-- <svg  width="17" height="17" fill="#F90"><use xlink:href="#calendar"></use></svg> July 14, 2024 | by Jeremie Mabiala</small> -->
+                </div>
+            </div>
+            <div>
+                <p class="post-context-text mt-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus 
+                  sint impedit doloremque reprehenderit, facilis quo optio veritatis molestias 
+                  autem sit amet magni laborum veniam corporis quam nostrum nam iure incidunt.
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed autem atque fuga quam 
+                  ab architecto repudiandae amet perferendis, ea excepturi cupiditate nisi
+                  dolorem? Earum error adipisci nobis, dignissimos culpa quidem?<br>
+              </p>
+            </div>
+            <a class="bg-yellow text-center w-50 rounded-top rounded-bottom nav-link text-black mb-3" href="{{ url_for('postsContent', blog_name='python')}}">Read more<svg width="24" height="24" fill="#black"><use xlink:href="#read"></use></svg></a>
+          </div>
+
+
+
+
+        
+  </div>
+
+  <div class="post-item left-side-all-device container mt-5 mb-1 shadow-lg ">
+    <div class="row  d-flex justify-content-center ">
+            <div class="d-flex">
+                <div class="w-25 h-2 mt-2 float-right">
+                <img class="img-fluid rounded-circle" src="{{ url_for('static', filename='profile.jpeg')}}">
+                </div>
+
+                <div class="mx-2 post-content-div">
+                <h1 class=" h4 mb-0 mt-2"> <a class=" text-white post-link" href="{{ url_for('postsContent', blog_name='example')}}">Unraveling spectral properties of kernel matrices – I</a></h1>
+                <small class=" text-white mt-0 post-content"> Posted on July 24, 2024 | By  <a class="link" href="/home" >Jeremie Mabiala. </a></small>
+                    <!-- <svg  width="17" height="17" fill="#F90"><use xlink:href="#time"></use></svg>   -->
+                    
+                    <!-- 7 min read |  -->
+                    <!-- <svg  width="17" height="17" fill="#F90"><use xlink:href="#calendar"></use></svg> July 14, 2024 | by Jeremie Mabiala</small> -->
+                </div>
+            </div>
+            <div>
+                <p class="post-context-text mt-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus 
+                  sint impedit doloremque reprehenderit, facilis quo optio veritatis molestias 
+                  autem sit amet magni laborum veniam corporis quam nostrum nam iure incidunt.
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed autem atque fuga quam 
+                  ab architecto repudiandae amet perferendis, ea excepturi cupiditate nisi
+                  dolorem? Earum error adipisci nobis, dignissimos culpa quidem?<br>
+              </p>
+            </div>
+            <a class="bg-yellow text-center w-50 rounded-top rounded-bottom nav-link text-black mb-3" href="{{ url_for('postsContent', blog_name='example')}}">Read more<svg width="24" height="24" fill="#black"><use xlink:href="#read"></use></svg></a>
+          </div>        
+  </div>
+
+
+  <div class="post-item left-side-all-device container mt-5 mb-1 shadow-lg ">
+    <div class="row  d-flex justify-content-center ">
+            <div class="d-flex">
+                <div class="w-25 h-2 mt-2 float-right">
+                <img class="img-fluid rounded-circle" src="{{ url_for('static', filename='profile.jpeg')}}">
+                </div>
+
+                <div class="mx-2 post-content-div">
+                <h1 class=" h4 mb-0 mt-2"> <a class=" text-white post-link" href="{{ url_for('postsContent', blog_name='example')}}">Unraveling spectral properties of kernel matrices – I</a></h1>
+                <small class=" text-white mt-0 post-content"> Posted on July 24, 2024 | By  <a class="link" href="/home" >Jeremie Mabiala. </a></small>
+                    <!-- <svg  width="17" height="17" fill="#F90"><use xlink:href="#time"></use></svg>   -->
+                    
+                    <!-- 7 min read |  -->
+                    <!-- <svg  width="17" height="17" fill="#F90"><use xlink:href="#calendar"></use></svg> July 14, 2024 | by Jeremie Mabiala</small> -->
+                </div>
+            </div>
+            <div>
+                <p class="post-context-text mt-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus 
+                  sint impedit doloremque reprehenderit, facilis quo optio veritatis molestias 
+                  autem sit amet magni laborum veniam corporis quam nostrum nam iure incidunt.
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed autem atque fuga quam 
+                  ab architecto repudiandae amet perferendis, ea excepturi cupiditate nisi
+                  dolorem? Earum error adipisci nobis, dignissimos culpa quidem?<br>
+              </p>
+            </div>
+            <a class="bg-yellow text-center w-50 rounded-top rounded-bottom nav-link text-black mb-3" href="{{ url_for('postsContent', blog_name='example')}}">Read more<svg width="24" height="24" fill="#black"><use xlink:href="#read"></use></svg></a>
+          </div>        
+  </div>
+
+
+  <div class="post-item left-side-all-device container mt-5 mb-1 shadow-lg ">
+    <div class="row  d-flex justify-content-center ">
+            <div class="d-flex">
+                <div class="w-25 h-2 mt-2 float-right">
+                <img class="img-fluid rounded-circle" src="{{ url_for('static', filename='profile.jpeg')}}">
+                </div>
+
+                <div class="mx-2 post-content-div">
+                <h1 class=" h4 mb-0 mt-2"> <a class=" text-white post-link" href="{{ url_for('postsContent', blog_name='example')}}">Unraveling spectral properties of kernel matrices – I</a></h1>
+                <small class=" text-white mt-0 post-content"> Posted on July 24, 2024 | By  <a class="link" href="/home" >Jeremie Mabiala. </a></small>
+                    <!-- <svg  width="17" height="17" fill="#F90"><use xlink:href="#time"></use></svg>   -->
+                    
+                    <!-- 7 min read |  -->
+                    <!-- <svg  width="17" height="17" fill="#F90"><use xlink:href="#calendar"></use></svg> July 14, 2024 | by Jeremie Mabiala</small> -->
+                </div>
+            </div>
+            <div>
+                <p class="post-context-text mt-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus 
+                  sint impedit doloremque reprehenderit, facilis quo optio veritatis molestias 
+                  autem sit amet magni laborum veniam corporis quam nostrum nam iure incidunt.
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed autem atque fuga quam 
+                  ab architecto repudiandae amet perferendis, ea excepturi cupiditate nisi
+                  dolorem? Earum error adipisci nobis, dignissimos culpa quidem?<br>
+              </p>
+            </div>
+            <a class="bg-yellow text-center w-50 rounded-top rounded-bottom nav-link text-black mb-3" href="{{ url_for('postsContent', blog_name='python')}}">Read more<svg width="24" height="24" fill="#black"><use xlink:href="#read"></use></svg></a>
+          </div>        
+  </div>
+
+
+  <div class="post-item left-side-all-device container mt-5 mb-3 shadow-lg ">
+    <div class="row  d-flex justify-content-center ">
+            <div class="d-flex">
+                <div class="w-25 h-2 mt-2 float-right">
+                <img class="img-fluid rounded-circle" src="{{ url_for('static', filename='profile.jpeg')}}">
+                </div>
+
+                <div class="mx-2 post-content-div">
+                <h1 class=" h4 mb-0 mt-2"> <a class=" text-white post-link" href="{{ url_for('postsContent', blog_name='example')}}">Unraveling spectral properties of kernel matrices – I</a></h1>
+                <small class=" text-white mt-0 post-content"> Posted on July 24, 2024 | By  <a class="link" href="/home" >Jeremie Mabiala. </a></small>
+                    <!-- <svg  width="17" height="17" fill="#F90"><use xlink:href="#time"></use></svg>   -->
+                    
+                    <!-- 7 min read |  -->
+                    <!-- <svg  width="17" height="17" fill="#F90"><use xlink:href="#calendar"></use></svg> July 14, 2024 | by Jeremie Mabiala</small> -->
+                </div>
+            </div>
+            <div>
+                <p class="post-context-text mt-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus 
+                  sint impedit doloremque reprehenderit, facilis quo optio veritatis molestias 
+                  autem sit amet magni laborum veniam corporis quam nostrum nam iure incidunt.
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed autem atque fuga quam 
+                  ab architecto repudiandae amet perferendis, ea excepturi cupiditate nisi
+                  dolorem? Earum error adipisci nobis, dignissimos culpa quidem?<br>
+              </p>
+            </div>
+            <a class="bg-yellow text-center w-50 rounded-top rounded-bottom nav-link text-black mb-3" href="{{ url_for('postsContent', blog_name='example')}}">Read more<svg width="24" height="24" fill="#black"><use xlink:href="#read"></use></svg></a>
+          </div>        
+  </div>
+
+  <!--  Pagination -->
+
+  <div class="container w-50 ">
+    <ul class="pagination ">
+        <li class="page-item">
+            <a class="page-link bg-yellow text-dark" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <!-- <span class="sr-only"></span> -->
+            </a>
+        </li>
+        <li class="page-item bg-yellow"><a class="page-link bg-yellow text-dark  " href="#">1</a></li>
+        <li class="page-item"><a class="page-link bg-yellow text-dark" href="#">2</a></li>
+        <li class="page-item"><a class="page-link bg-yellow text-dark" href="#">3</a></li>
+       
+        <li class="page-item">
+            <a class="page-link bg-yellow text-dark" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            <!-- <span class="sr-only">Next</span> -->
+            </a>
+        </li>
+        </ul>
+
+
+ </div>
+
+
+
+
+
+
+
+ 
 {% endblock %}

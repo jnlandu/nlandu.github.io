@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block mainContent %}
+{% include 'postHeader.html' %}
+{% endblock %}
+
+{% block blogcontent %}
+<div class="markdown-content">
+    {{ content|safe }}
+</div>
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const preElements = document.querySelectorAll('pre');
+      preElements.forEach(pre => {
+        const codeTitle = document.createElement('div');
+        codeTitle.className = 'code-title';
+        const language = pre.querySelector('code').className.replace('language-', '');
+        codeTitle.textContent = language;
+        pre.insertBefore(codeTitle, pre.firstChild);
+        
+        const copyButton = document.createElement('button');
+        copyButton.className = 'copy-button';
+        copyButton.textContent = 'Copy Code';
+        copyButton.addEventListener('click', () => {
+          navigator.clipboard.writeText(pre.querySelector('code').textContent).then(() => {
+            copyButton.textContent = 'Copied!';
+            setTimeout(() => { copyButton.textContent = 'Copy Code'; }, 2000);
+          });
+        });
+        pre.insertBefore(copyButton, pre.firstChild);
+      });
+    });
+  </script>
+{% endblock %}
+
+
+

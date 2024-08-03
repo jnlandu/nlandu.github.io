@@ -45,7 +45,9 @@ header {
 .footer{
     background-color: #444;
 }
-
+.bg-prim{
+    background-color: #444;
+}
 /*  Links  */
 .nav-link:hover,
 .nav-link:active{
@@ -142,19 +144,129 @@ div.logo {
 }
 .bleft{
     border-right: 1px solid;
-}
-/* .bo{
-    border: 1px solid red;
-    border-radius: rounded;
-} */
-
-.bleft{
     width: 25vw;
 }
+
 .rounded-div {
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
 }
+
+.post-item{
+    /* border: 1px solid   #222; */
+    border: 1px solid #333;
+    border-radius: 22.5px;
+    /* background-color: ; */
+}
+
+.page-item{
+    background-color: #F90 !important;
+}
+
+
+.markdown-body {
+    /* background-color: #444 !important; */
+    border-radius: 5px;
+    /* border: 1px solid #ddd; */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+code {
+    /* background-color: gray !important; */
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    overflow-x: auto;
+    padding: 16px;
+    margin: 0;
+}
+
+
+pre {
+    position: relative;
+    padding-top: 30px;
+  }
+  .code-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #f7f7f7;
+    border-bottom: 1px solid #ccc;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-family: monospace;
+    color: #333;
+  }
+  .copy-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #eee;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+
+/*  For codes and images in the posts */
+
+/* .markdown-body {
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+} */
+
+
+/* .markdown-body {
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+
+.markdown-content {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+pre {
+    background-color: #f6f8fa;
+    border: 1px solid #dcdcdc;
+    border-radius: 3px;
+    overflow-x: auto;
+    padding: 16px;
+    margin: 0;
+}
+
+code {
+    background-color: #f6f8fa;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.highlight {
+    background-color: #f6f8fa;
+    border-radius: 3px;
+}
+
+.highlight pre {
+    background-color: #404040;
+    border: 1px solid #dcdcdc;
+} */
+
+
+/* img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+} */
+
 
 
 
