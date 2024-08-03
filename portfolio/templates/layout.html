@@ -14,7 +14,7 @@
 <link rel="stylesheet" type="text/css" href="
 {{ url_for('static', filename = 'main-v3.css') }}">
 <!--  Github makrkdown css  -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.6.1/github-markdown-light.css" integrity="sha512-tVO0ZLV54CEoiM+i1hvfZGcopGR3rxyyC3L2/P/6NRTVXlrp4OKyTFunluVG1BRNasDLnm6ZRPDKBGM0CkS99Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.6.1/github-markdown-light.css" integrity="sha512-tVO0ZLV54CEoiM+i1hvfZGcopGR3rxyyC3L2/P/6NRTVXlrp4OKyTFunluVG1BRNasDLnm6ZRPDKBGM0CkS99Q==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 
 
 <!--  Highlight.js -->
@@ -87,10 +87,15 @@
 
 {% endblock %}
 
-<article class="markdown-body">
+
+
+
+
+<!-- <div class="container post-div-mobile mt-5 "> -->
+
   {% block  blogcontent %}
   {% endblock %}
-</article>
+<!-- </div> -->
 
 
 
