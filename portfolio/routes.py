@@ -1,6 +1,11 @@
 from flask import render_template, request
 from portfolio import app
 
+from markdown_it import MarkdownIt
+md = MarkdownIt()
+
+import os
+
 @app.route('/')
 @app.route('/home')
 def home():
@@ -35,9 +40,21 @@ def resume():
 def consulting():
     return render_template('consulting.html', title ="consulting")
 
-@app.route('/postsContent')
-def postsContent():
-    return render_template('postsContent.html', title ="posts")
+@app.route('/postsContent/<blog_name>')
+def postsContent(blog_name):
+    blog_path = os.path.join('./portfolio/blogs', f'{blog_name}.md')
+    if not os.path.exists(blog_path):
+        render_template('errors.html')
+
+    with open(blog_path, 'r') as blog_file:
+        blog_content = blog_file.read()
+    
+    html_content = md.render(blog_content)
+    return render_template('postsContent.html', title ="posts", content= html_content)
+
+
+
+
 
 # For emails 
 @app.route('/sent', methods=['POST', 'GET'])

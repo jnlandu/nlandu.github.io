@@ -2,9 +2,12 @@
 
 {% block mainContent %}
 {% include 'postHeader.html' %}
+{% endblock %}
 
-
-
+{% block blogcontent %}
+<div class="markdown-content">
+    {{ content|safe}}
+</div>
 {% endblock %}
 
 
