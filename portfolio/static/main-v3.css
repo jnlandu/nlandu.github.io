@@ -42,6 +42,9 @@ header {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
 }
+a:hover{
+    cursor:pointer;
+}
 .footer{
     background-color: #444;
 }
@@ -162,30 +165,42 @@ div.logo {
 .page-item{
     background-color: #F90 !important;
 }
+.position, .post-submenu{
+    position:fixed;
+    z-index: 100;
+}
 
 
+
+/* 
 .markdown-body {
-    /* background-color: #444 !important; */
+    background-color: #444 !important;
     border-radius: 5px;
-    /* border: 1px solid #ddd; */
+    border: 1px solid #ddd;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
+} */
+ h1, h2 > .post-content-div{
+    color: #F90;
+ }
 code {
     /* background-color: gray !important; */
-    border: 1px solid #dcdcdc;
-    border-radius: 5px;
-    overflow-x: auto;
-    padding: 16px;
+    
+    /* overflow-x: auto; */
+    /* padding: 16px; */
     margin: 0;
 }
 
 
+
 pre {
     position: relative;
-    padding-top: 30px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    /* padding-top: 30px;
+    padding-top: 20px; */
   }
-  .code-title {
+  /* .code-title {
     position: absolute;
     top: 0;
     left: 0;
@@ -195,16 +210,24 @@ pre {
     font-size: 12px;
     font-family: monospace;
     color: #333;
-  }
+    border-bottom: none;
+  } */
   .copy-button {
     position: absolute;
     top: 0;
     right: 0;
+    margin-top: 0;
     background: #eee;
-    border: none;
     padding: 5px 10px;
+    /* padding-top: 10px;
+    padding-bottom: 5px; */
+    margin-bottom: 0;
+    margin-top: 0;
     cursor: pointer;
     font-size: 12px;
+    /* border-bottom: none; */
+    border: .5px solid;
+    border-radius: 3px;
   }
 
 /*  For codes and images in the posts */
@@ -355,7 +378,42 @@ code {
         display: none;
         margin: 0px 0px 0px 0px;
     }
-    
+    .post-div-mobile{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .post-submenu{
+        margin-top: 176px;
+        width: 100%;
+        background-color: #333;
+    }
+    .post-container{
+        margin-top: 280px;
+        margin-left: 5vh;
+        margin-right: 5vh;
+    }
+    .off-submenu {
+        margin-top: 200px;
+        border: 2px solid #333;
+        max-width: 40vh;
+        margin-left: 2vh;
+        margin-right: 2vh;
+    }
+    .table-content{
+        border-left: 2px solid red;
+        /* overflow: scroll; */
+    }
+    .off-body-scroll{
+        max-height: 30vh;
+        overflow: scroll;
+        /* opacity: 0.5; */
+    }
+
+
+
+
+
+
 }
 
 

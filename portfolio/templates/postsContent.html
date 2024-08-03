@@ -2,12 +2,112 @@
 
 {% block mainContent %}
 {% include 'postHeader.html' %}
-{% endblock %}
 
-{% block blogcontent %}
-<div class="markdown-content">
-    {{ content|safe }}
+<!--  Submenu for posts that display posts table of contents -->
+<div class="post-submenu d-flex flex-row justify-content-between">
+    <div class="container my-3">
+      <a 
+      data-bs-toggle="offcanvas" data-bs-target="#offcanvasSubmenu" 
+      aria-controls="offcanvasSubmenuLabel" aria-expanded="false" 
+      >
+      <svg  width="24" height="24" fill="#F90"><use xlink:href="#sidenav"></use></svg>
+      </a>
+      <a href="#category" class="link ms-2 me-2">Tutorials </a> <svg  width="17" height="17" fill="#F90"><use xlink:href="#chevron"></use></svg> <a href="subcatgeory" class="link">JavaScript</a>
+    </div>
+
+    <div class="post-rs-mobile my-3 me-4"
+        data-bs-toggle="offcanvas" data-bs-target="#offcanvasMore" 
+        aria-controls="offcanvasMore" aria-expanded="false" >
+        <svg  width="17" height="17" fill="#F90"><use xlink:href="#more"></use></svg>
+        </a>
+
+    </div>
+
 </div>
+
+<!--  Offcanvas for submenu -->
+<div class="offcanvas off-submenu offcanvas-start bg-prim" tabindex="-1" id="offcanvasSubmenu" aria-labelledby="offcanvasSubmenuLabel">
+    <div class="offcanvas-body ">
+      <div class="col-12 off-body-scroll">
+        <p class="h4 text-white">In this article</p>
+        <div class="container table-content  d-flex flex-column">
+          <a href="#" class="link mb-3">What is innerHTML</a>
+          <a href="#" class="link mb-3">What is innerHTML</a>
+          <a href="#" class="link mb-3">What is innerHTML</a>
+          <a href="#" class="link mb-3">What is innerHTML</a>
+          <a href="#" class="link mb-3">What is innerHTML</a>
+          <a href="#" class="link mb-3">What is innerHTML</a>
+
+        </div>
+        <p class="h4 text-white mt-2">In this category</p>
+        <div class="container ">
+          <a class="text-white" href="#">Understanding JavaScript</p>
+          <a class="text-white" href="#">Build your first Android App with JavaScript,React Native and Expo Go</p>
+          <a class="text-white" href="#"> Understanding the method map for JavaScript Array</p>
+          <a class="text-white" href="#">Introduce yourself to NodeJs: A beginner path</p>
+          <a class="text-white" href="#">Understanding JavaScript</p>
+          <a class="text-white" href="#">Introduction to Ajax: Powerfull for ML Computations</p>
+        </div>
+
+        <p class="h4 text-white mt-2">Related posts</p>
+        <div class="container ">
+          <a class="text-white" href="#">Understanding JavaScript</p>
+          <a class="text-white" href="#">Build your first Android App with JavaScript,React Native and Expo Go</p>
+          <a class="text-white" href="#"> Understanding the method map for JavaScript Array</p>
+          <a class="text-white" href="#">Introduce yourself to NodeJs: A beginner path</p>
+          <a class="text-white" href="#">Understanding JavaScript</p>
+          <a class="text-white" href="#">Introduction to Ajax: Powerfull for ML Computations</p>
+        </div>
+
+        <p class="h4 text-white mt-2">Related links</p>
+        <div class="container ">
+          <a class="text-white" href="#">Understanding JavaScript</p>
+          <a class="text-white" href="#">Build your first Android App with JavaScript,React Native and Expo Go</p>
+          <a class="text-white" href="#"> Understanding the method map for JavaScript Array</p>
+          <a class="text-white" href="#">Introduce yourself to NodeJs: A beginner path</p>
+          <a class="text-white" href="#">Understanding JavaScript</p>
+          <a class="text-white" href="#">Introduction to Ajax: Powerfull for ML Computations</p>
+        </div>
+      </div>
+  </div>
+
+</div>
+
+
+
+
+
+<!--  Offcanvas more  -->
+<div class="offcanvas offcanvas-end bg-prim" tabindex="-1" id="offcanvasMore" aria-labelledby="offcanvasMoreLabel">
+
+  <div class="offcanvas-header d-flex justify-content-between  ">
+    <!-- <a  type="button" class="text-reset" aria-label="Close" data-bs-dismiss="more" ><svg  width="24" height="24" fill="#F90"><use xlink:href="#menu"></use></svg></a> -->
+    <h2 class="h6 text-white">Article Actions</h2>
+    <!-- <a  type="button" class=" text-reset" data-bs-dismiss="offcanvas" aria-label="Close" >Menu</a> -->
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body ">
+    <div class=" ">
+      <h2 class="h6 text-white"><svg  width="17" height="17" fill="#F90"><use xlink:href="#languages"></use></svg> Translate </h2>
+    <div class="d-flex flex-column">
+    <a href="" class="link mb-3"> English(US) </a>
+    <a href="" class="link mb-3"> French</a>
+    <a href="" class="link mb-3"> Chinese</a>
+   </div>
+   </div>
+   <span class="text-white">Download <svg  width="17" height="17" fill="#F90"><use xlink:href="#pdf"></use></svg> </span>
+      
+  </div>
+</div>
+
+</div>
+
+<div class="post-container ">
+{{ content|safe }}
+
+</div>
+
+<!--  Posts foot -->
 
 
 
@@ -16,17 +116,19 @@
     document.addEventListener("DOMContentLoaded", function() {
       const preElements = document.querySelectorAll('pre');
       preElements.forEach(pre => {
-        const codeTitle = document.createElement('div');
-        codeTitle.className = 'code-title';
-        const language = pre.querySelector('code').className.replace('language-', '');
-        codeTitle.textContent = language;
-        pre.insertBefore(codeTitle, pre.firstChild);
+        // const codeTitle = document.createElement('div');
+        // codeTitle.className = 'code-title';
+        // const language = pre.querySelector('code').className.replace('language-', '');
+        // codeTitle.textContent = language;
+        // pre.insertBefore(codeTitle, pre.firstChild);
         
         const copyButton = document.createElement('button');
         copyButton.className = 'copy-button';
+        copyButton.classList.add('bg-yellow','yellow')
         copyButton.textContent = 'Copy Code';
         copyButton.addEventListener('click', () => {
           navigator.clipboard.writeText(pre.querySelector('code').textContent).then(() => {
+            copyButton.innerHTML = check
             copyButton.textContent = 'Copied!';
             setTimeout(() => { copyButton.textContent = 'Copy Code'; }, 2000);
           });
