@@ -107,8 +107,52 @@
 
 </div>
 
+
+<div class=" feedback-mobile">
+  <div class="container mb-0">
+  <p class="h2"> Help me imporve my writings</p>
+  <p> Was this page helpfull to you? </p>
+  </div>
+  <div class=" d-flex flex-row justify-content-between w-50 ms-2">
+    <button class="btn px-4"><svg  width="17" height="17" fill="black"><use xlink:href="#thumbup"></use></svg>  Yes
+    </button>
+    <button class="btn px-4"><svg  width="17" height="17" fill="black"><use xlink:href="#thumbdown"></use></svg>  No
+    </button>
+  </div>
+ 
+  <div class="container d-flex">
+    <div class="w-25 h-2 mt-2 float-right">
+    <img class="img-fluid rounded-circle" src="{{ url_for('static', filename='profile.jpeg')}}">
+    </div>
+
+    <div class="mx-2 post-content-div">
+    <h1 class=" h4 mb-0 mt-2"> <a class=" text-white post-link" href="{{ url_for('postsContent', blog_name='example')}}">Unraveling spectral properties of kernel matrices – I</a></h1>
+    <small class=" text-white mt-0 post-content"> Posted on July 24, 2024 | By  <a class="link" href="/home" >Jeremie Mabiala. </a></small>
+    </div>
+</div>
+<div class="container">
+  <p><span  class="h2 fs-5 ">Follow :</span> 
+    <a class="mx-2 rs-click" href="https://x.com/ValentinMabiala"><svg  width="17" height="17" fill="#D9D9D9"><use xlink:href="#twitter"></use></svg></a>
+    <a class="mx-2 rs-click" href="https://www.linkedin.com/in/jnlandu00a/"><svg  width="17" height="17" fill="#D9D9D9"><use xlink:href="#linkedin"></use></svg></a>
+    <a class="mx-2 rs-click" href="https://x.com/ValentinMabiala"><svg  width="17" height="17" fill="#D9D9D9"><use xlink:href="#facebook"></use></svg></a>
+    <a class="mx-2 rs-click" href="https://x.com/ValentinMabiala"><svg  width="17" height="17" fill="#D9D9D9"><use xlink:href="#youtube"></use></svg></a>
+    <a class="mx-2 rs-click" href="https://www.github.com/jnlandu"><svg  width="17" height="17" fill="#D9D9D9"><use xlink:href="#github"></use></svg> </a>
+  </p>
+  </div>
+  <div class="container">
+    <p> Subscribe to leave a comment</p>
+  </div>
+</div>
+<div class="container d-flex flex-row justify-content-between mt-5">
+    <button class="btn follow-next-posts"><svg  width="17" height="17" fill="#D9D9D9"><use xlink:href="#arrowright"></use></svg><span class="ms-3"> Code and Code blocks </span></button>
+    <button class="btn follow-next-posts"><span class=" me-3">Banach spaces</span><svg  width="17" height="17" fill="#D9D9D9"><use xlink:href="#arrowleft"></use></svg> </button>
+  </div>
+
+</div>
+
 <!--  Posts foot -->
 
+{% include 'footer.html' %}
 
 
 

@@ -120,13 +120,13 @@ div.logo {
   
   }
  
-  .img-el{
+.img-el{
     /* padding-right: 80%; */
     padding-left: 10wh;
 
   }
 
-  #btn-back-to-top {
+#btn-back-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -155,8 +155,10 @@ div.logo {
     border-top-left-radius: 10px;
 }
 
+.top-post-item {
+    margin-top: 220px !important;
+}
 .post-item{
-    /* border: 1px solid   #222; */
     border: 1px solid #333;
     border-radius: 22.5px;
     /* background-color: ; */
@@ -409,7 +411,17 @@ code {
         /* opacity: 0.5; */
     }
 
-
+    .feedback-mobile{
+        border: 1px solid #333;
+        border-radius: 3px;
+        margin-left: 5vh;
+        margin-right: 5vh;
+        margin-top: 70px;
+    }
+    .follow-next-posts{
+        border: 1px solid black;
+    }
+    }
 
 
 
