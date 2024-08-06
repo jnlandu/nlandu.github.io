@@ -163,6 +163,13 @@ div.logo {
     border-radius: 22.5px;
     /* background-color: ; */
 }
+.post-item:hover{
+    /* padding: 20px; */
+    border: 3px solid #333;
+    border-radius: 22.5px;
+    /* box-shadow: 30px 30px 20px red !important; */
+}
+
 
 .page-item{
     background-color: #F90 !important;
@@ -231,6 +238,9 @@ pre {
     border: .5px solid;
     border-radius: 3px;
   }
+
+
+
 
 /*  For codes and images in the posts */
 
@@ -336,7 +346,7 @@ code {
     }
     .rs-mobile{
         position: absolute;
-        margin-left: 15lvw;
+        margin-left: 17lvw;
         margin-top: 15px;
     }
     .rs-other-device{
@@ -385,10 +395,13 @@ code {
         margin-left: 10px;
     }
     .post-submenu{
-        margin-top: 176px;
+        margin-top: 175px;
         width: 100%;
         background-color: #333;
     }
+    /* .post-submenu-sg {
+        margin-top: 149px !important; 
+    } */
     .post-container{
         margin-top: 280px;
         margin-left: 5vh;
@@ -413,17 +426,30 @@ code {
 
     .feedback-mobile{
         border: 1px solid #333;
-        border-radius: 3px;
+        border-radius: 7px;
         margin-left: 5vh;
         margin-right: 5vh;
         margin-top: 70px;
     }
+
     .follow-next-posts{
         border: 1px solid black;
+        /* margin-left: 3px; */
+        width: 200px;
     }
+    .btn-yes{
+        margin-left: 3em;
+    }
+    .btn-no{
+        margin-right: 3em;
+    }
+    .prev-next-btn-mobile{
+        margin-left: 4vh;
+        margin-right: 4vh;
     }
 
-
+    
+    
 
 
 }

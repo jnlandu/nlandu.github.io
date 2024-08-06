@@ -108,10 +108,6 @@
                 <div class="mx-2 post-content-div">
                 <h1 class=" h4 mb-0 mt-2"> <a class=" text-white post-link" href="{{ url_for('postsContent', blog_name='example')}}">Unraveling spectral properties of kernel matrices – I</a></h1>
                 <small class=" text-white mt-0 post-content"> Posted on July 24, 2024 | By  <a class="link" href="/home" >Jeremie Mabiala. </a></small>
-                    <!-- <svg  width="17" height="17" fill="#F90"><use xlink:href="#time"></use></svg>   -->
-                    
-                    <!-- 7 min read |  -->
-                    <!-- <svg  width="17" height="17" fill="#F90"><use xlink:href="#calendar"></use></svg> July 14, 2024 | by Jeremie Mabiala</small> -->
                 </div>
             </div>
             <div>
@@ -158,29 +154,16 @@
   </div>
 
   <!--  Pagination -->
+<div class=" d-flex justify-content-between mt-3  mb-4 prev-next-btn-mobile ">
+  <button class="btn follow-next-posts bg-yellow me-1 "><svg  width="17" height="17" fill="#D9D9D9"><use xlink:href="#arrowright"></use></svg><span class="ms-3"> Previous </span></button>
+  <button class="btn follow-next-posts bg-yellow ms-1"><span class=" me-3">Next</span><svg  width="17" height="17" fill="#D9D9D9"><use xlink:href="#arrowleft"></use></svg> </button>
+</div>
 
-  <div class="container w-50 ">
-    <ul class="pagination ">
-        <li class="page-item">
-            <a class="page-link bg-yellow text-dark" href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-            <!-- <span class="sr-only"></span> -->
-            </a>
-        </li>
-        <li class="page-item bg-yellow"><a class="page-link bg-yellow text-dark  " href="#">1</a></li>
-        <li class="page-item"><a class="page-link bg-yellow text-dark" href="#">2</a></li>
-        <li class="page-item"><a class="page-link bg-yellow text-dark" href="#">3</a></li>
-       
-        <li class="page-item">
-            <a class="page-link bg-yellow text-dark" href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-            <!-- <span class="sr-only">Next</span> -->
-            </a>
-        </li>
-        </ul>
+</div>
 
+ <!-- Foot notes  -->
+ {% include 'footer.html' %}
 
- </div>
 
  <!--  Content footers: -->
 
